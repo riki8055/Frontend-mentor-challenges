@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a href="javascript:void(0)" class="logo">
+            <img src="./assets/images/logo.svg" alt="logo" />
+          </a>
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">New</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">Categories</a>
+            </li>
+
+            <button type="menu" class="menu" id="menuClose">
+              <img src="/assets/images/icon-menu-close.svg" />
+            </button>
+          </ul>
+          <button type="menu" class="menu" id="menuOpen">
+            <img src="/assets/images/icon-menu.svg" alt="menu" />
+          </button>
+        </nav>
+      </header>
+      <section class="section">
+        <div class="section-content">
+          <div class="left-box">
+            <div class="left-box-img">
+              <img src="/assets/images/image-web-3-desktop.jpg" alt="Web 3.0" />
+            </div>
+
+            <div class="left-box-content">
+              <div class="left-box-content-left">
+                <h1 class="heading">The Bright Future of Web 3.0?</h1>
+              </div>
+              <div class="left-box-content-right">
+                <p class="para">
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button type="button" class="btn">Read more</button>
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <h1 class="right-box-heading">New</h1>
+            <ul class="right-box-content">
+              <li>
+                <a href="javascript:void(0)" class="content-heading"
+                  >Hydrogen VS Electric Cars</a
+                >
+                <p class="content-para">
+                  Will hydrogen-fueled cars ever catch up to EVs?
+                </p>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="content-heading">
+                  The Downsides of AI Artistry</a
+                >
+                <p class="content-para">
+                  What are the possible adverse effects of on-demand AI image
+                  generation?
+                </p>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="content-heading"
+                  >Is VC Funding Drying Up?</a
+                >
+                <p class="content-para">
+                  Private funding by VC firms is down 50% YOY. We take a look at
+                  what that means.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-cards">
+          <div class="card">
+            <div class="card-img">
+              <img src="/assets/images/image-retro-pcs.jpg" alt="Retro PCs" />
+            </div>
+            <div class="card-content">
+              <span class="number">01</span>
+              <h1 class="card-heading">
+                <a href="javascript:void(0)">Reviving Retro PCs</a>
+              </h1>
+              <p class="card-para">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="/assets/images/image-top-laptops.jpg"
+                alt="Top Laptops"
+              />
+            </div>
+            <div class="card-content">
+              <span class="number">02</span>
+              <h1 class="card-heading">
+                <a href="javascript:void(0)">10 Laptops of 2022</a>
+              </h1>
+              <p class="card-para">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="/assets/images/image-gaming-growth.jpg"
+                alt="Gaming Growth"
+              />
+            </div>
+            <div class="card-content">
+              <span class="number">03</span>
+              <h1 class="card-heading">
+                <a href="javascript:void(0)">The Growth of Gaming</a>
+              </h1>
+              <p class="card-para">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Ritik Thakur</a>.
+        </div>
+      </footer>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
