@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+:root {
+  --Primary-Color-1: hsl(259, 100%, 65%);
+  --Primary-Color-2: hsl(0, 100%, 67%);
+
+  --Neutral-Color-1: hsl(0, 0%, 100%);
+  --Neutral-Color-2: hsl(0, 0%, 94%);
+  --Neutral-Color-3: hsl(0, 0%, 86%);
+  --Neutral-Color-4: hsl(0, 1%, 44%);
+  --Neutral-Color-5: hsl(0, 0%, 8%);
+}
+
+/* Resets & Commons */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* hiding arrow buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+/* End of Resets & Commons */
+
+/* Temp */
+.bord {
+  border: 0.1rem solid red;
+}
+/* End of Temp */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--Neutral-Color-2);
+}
+
+.card {
+  width: 100rem;
+  background-color: var(--Neutral-Color-1);
+  padding: 6rem;
+  border-radius: 3rem 3rem 12rem 3rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--Neutral-Color-4);
+}
+
+form {
+  display: flex;
+  border-bottom: 0.1rem solid var(--Neutral-Color-3);
+  padding-bottom: 6rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.form-control {
+  margin-right: 3rem;
+}
+
+form label {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--Neutral-Color-4);
+}
+
+.invalid label {
+  color: var(--Primary-Color-2);
+}
+
+form input {
+  width: 20rem;
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--Neutral-Color-3);
+  margin: 1rem 0;
+  letter-spacing: 0.15rem;
+}
+
+.invalid input {
+  border: 0.1rem solid var(--Primary-Color-2);
+}
+
+.error-msg {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--Primary-Color-2);
+  letter-spacing: 0.05rem;
+  display: none;
+}
+
+.invalid .error-msg {
+  display: block;
+}
+
+button[type="submit"] {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Primary-Color-1);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: -55%;
+  right: 0;
+  transform: translateY(-50%);
+  box-shadow: 0.1rem 0.1rem 0.1rem var(--Neutral-Color-4);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+button[type="submit"] img {
+  width: 50%;
+  height: 50%;
+}
+
+.display h1 {
+  font-size: 10rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--Neutral-Color-5);
+  line-height: 1.2;
+}
+
+.display h1 span {
+  color: var(--Primary-Color-1);
+  margin-right: 2rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.attribution a {
+  color: var(--Primary-Color-1);
+}
+
+/* Responsive */
+@media (max-width: 1650px) {
+  html {
+    font-size: 55%;
+  }
+
+  .card {
+    width: 85rem;
+  }
+
+  form label {
+    font-size: 1.6rem;
+  }
+
+  form input {
+    width: 16rem;
+    padding: 1rem 1.6rem;
+    font-size: 2.8rem;
+  }
+
+  .error-msg {
+    font-size: 1.2rem;
+  }
+
+  button[type="submit"] {
+    width: 8rem;
+    height: 8rem;
+    bottom: -46%;
+  }
+
+  .display h1 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  button[type="submit"] {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+@media (max-width: 700px) {
+  form input {
+    width: 12rem;
+    font-size: 2.5rem;
+  }
+
+  button[type="submit"] {
+    width: 7rem;
+    height: 7rem;
+    bottom: -42%;
+  }
+  .display h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+
+  .card {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  form label {
+    font-size: 1.3rem;
+  }
+  form input {
+    width: 10rem;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  button[type="submit"] {
+    width: 6rem;
+    height: 6rem;
+    bottom: -42%;
+  }
+
+  .attribution {
+    font-size: 1rem;
+  }
+}
+/* End of Responsive */

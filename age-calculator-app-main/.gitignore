@@ -12,27 +12,5 @@
 *.xd
 
 # Avoid your project being littered with annoying .DS_Store files!
-
-# Folders
-1. QR Code Generator
-10. Four Card Feature Section Master/
-13. Tip Calculator App Main/
-15. Todo App/
-16. Interactive Rating Component Main/
-17. Interactive Comments Section Main/
-2. NFT Preview Card/
-3. Order Summary Component/
-4. Stats Preview Card Component/
-5. 3-column Preview Card Component/
-6. Profile Card Component/
-7. Faq Accordion Card/
-8. Social Proof Section/
-9. Article Preview Component/
-screenshots
-
-# files
 .DS_Store
 .prettierignore
-design
-README-template.md
-style-guide.md
