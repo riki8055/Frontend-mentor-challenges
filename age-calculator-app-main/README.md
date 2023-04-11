@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://github.com/riki8055/Frontend-mentor-challenges/tree/main/age-calculator-app-main)
+- Live Site URL: [Click here](https://riki8055.github.io/Frontend-mentor-challenges/age-calculator-app-main/)
 
 ## My process
 
