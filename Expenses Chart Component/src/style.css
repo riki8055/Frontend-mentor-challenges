@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* Resets & Commons */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --Primary-Color-1: hsl(10, 79%, 65%); /* Soft Red */
+  --Primary-Color-1__Hover: hsl(10, 79%, 75%); /* Soft Red */
+  --Primary-Color-2: hsl(186, 34%, 60%); /* Cyan */
+  --Primary-Color-2__Hover: hsl(186, 34%, 70%); /* Cyan */
+
+  --Neutral-Color-1: hsl(25, 47%, 15%); /* Dark Brown */
+  --Neutral-Color-2: hsl(28, 10%, 53%); /* Medium Brown */
+  --Neutral-Color-3: hsl(27, 66%, 92%); /* Cream */
+  --Neutral-Color-4: hsl(33, 100%, 98%); /* Very Pale Orange */
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+  background-color: var(--Neutral-Color-3);
+  color: var(--Neutral-Color-1);
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 2.2rem 3rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+/* Resets & Commons */
+
+/* Temps */
+.bord {
+  border: 0.1rem solid red;
+}
+/* Temps */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.balance {
+  width: 100%;
+  margin-bottom: 2.4rem;
+  background-color: var(--Primary-Color-1);
+  color: var(--Neutral-Color-4);
+}
+
+.balance#cssportal-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.balance .cssportal-div {
+  display: flex;
+  align-items: center;
+}
+
+.balance #div1 {
+  grid-area: 1/1/2/2;
+}
+.balance #div2 {
+  grid-area: 2/1/3/2;
+}
+.balance #div3 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.balance #div1 span {
+  font-size: 1.49rem;
+  font-weight: 300;
+  letter-spacing: -0.03rem;
+}
+
+.balance #div2 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.balance #div3 {
+  position: relative;
+}
+
+.balance #div3 .circle {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.balance #div3 .circle-1 {
+  border: 0.2rem solid var(--Neutral-Color-4);
+  z-index: 1;
+  transform: translateX(-2.2rem);
+}
+
+.balance #div3 .circle-2 {
+  background-color: #222;
+  z-index: 0;
+}
+
+.spending {
+  width: 100%;
+  background-color: var(--Neutral-Color-4);
+}
+
+.spending h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6rem;
+}
+
+#spend__cssportal-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0px 1.5rem;
+  width: 100%;
+  height: 15rem;
+}
+
+#spend__cssportal-grid .cssportal-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: var(--Neutral-Color-2);
+  font-size: 1.4rem;
+}
+
+#spend__cssportal-grid #div1 {
+  grid-area: 1/1/2/2;
+}
+
+#spend__cssportal-grid #div2 {
+  grid-area: 1/2/2/3;
+}
+
+#spend__cssportal-grid #div3 {
+  grid-area: 1/3/2/4;
+}
+
+#spend__cssportal-grid #div4 {
+  grid-area: 1/4/2/5;
+}
+
+#spend__cssportal-grid #div5 {
+  grid-area: 1/5/2/6;
+}
+
+#spend__cssportal-grid #div6 {
+  grid-area: 1/6/2/7;
+}
+
+#spend__cssportal-grid #div7 {
+  grid-area: 1/7/2/8;
+}
+
+#spend__cssportal-grid .bar {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.8rem;
+  background-color: var(--Primary-Color-1);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+}
+
+#spend__cssportal-grid .bar .bar__value {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  background-color: #222;
+  color: var(--Neutral-Color-3);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+#spend__cssportal-grid .bar:hover {
+  background-color: var(--Primary-Color-1__Hover);
+}
+
+#spend__cssportal-grid .bar:hover .bar__value {
+  opacity: 1;
+  visibility: visible;
+  top: -4.5rem;
+  padding: 1rem;
+}
+
+hr {
+  margin: 2.8rem 0 1.2rem 0;
+  border: 0.1rem solid var(--Neutral-Color-3);
+}
+
+#total__cssportal-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.2rem 0px;
+  width: 100%;
+}
+#total__cssportal-grid #div1 {
+  grid-area: 1/1/2/2;
+}
+
+#total__cssportal-grid #div2 {
+  grid-area: 2/1/3/2;
+}
+
+#total__cssportal-grid #div3 {
+  grid-area: 1/2/2/3;
+}
+
+#total__cssportal-grid #div4 {
+  grid-area: 2/2/3/3;
+}
+
+#total__cssportal-grid .cssportal-div {
+  display: flex;
+}
+
+#total__cssportal-grid #div1,
+#total__cssportal-grid #div2 {
+  justify-content: left;
+}
+
+#total__cssportal-grid #div3,
+#total__cssportal-grid #div4 {
+  justify-content: right;
+}
+
+#total__cssportal-grid #div1,
+#total__cssportal-grid #div3 {
+  align-items: flex-end;
+}
+
+#total__cssportal-grid #div2,
+#total__cssportal-grid #div4 {
+  align-items: flex-start;
+}
+
+#total__cssportal-grid #div1 span,
+#total__cssportal-grid #div3 span,
+#total__cssportal-grid #div4 span {
+  font-size: 1.49rem;
+  font-weight: 300;
+  letter-spacing: -0.03rem;
+}
+
+#total__cssportal-grid #div2 h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 4rem;
+}
+
+#total__cssportal-grid #div3 span {
+  font-weight: 700;
+}
+
+#total__cssportal-grid #div1 span,
+#total__cssportal-grid #div4 span {
+  color: var(--Neutral-Color-2);
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsives */
+@media (max-width: 449px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .card {
+    padding: 1.6rem 2.4rem;
+  }
+
+  .balance {
+    margin-bottom: 1.6rem;
+  }
+
+  .balance #div1 span {
+    font-size: 1.2rem;
+  }
+
+  .balance #div2 h2 {
+    font-size: 2rem;
+  }
+
+  .balance #div3 .circle {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .balance #div3 .circle-1 {
+    transform: translateX(-1.6rem);
+  }
+
+  .spending h2 {
+    font-size: 2rem;
+    margin-bottom: 3.4rem;
+  }
+
+  #spend__cssportal-grid {
+    height: 12rem;
+  }
+
+  #spend__cssportal-grid .cssportal-div {
+    font-size: 1.2rem;
+  }
+
+  #spend__cssportal-grid .bar .bar__value {
+    top: -1.6rem;
+    font-size: 1rem;
+  }
+
+  #spend__cssportal-grid .bar:hover .bar__value {
+    top: -3.6rem;
+    padding: 0.8rem;
+  }
+
+  hr {
+    margin: 2.4rem 0 1.2rem 0;
+  }
+
+  #total__cssportal-grid #div1 span,
+  #total__cssportal-grid #div3 span,
+  #total__cssportal-grid #div4 span {
+    font-size: 1.2rem;
+  }
+
+  #total__cssportal-grid #div2 h1 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+  #total__cssportal-grid #div1 span,
+  #total__cssportal-grid #div3 span,
+  #total__cssportal-grid #div4 span {
+    font-size: 1.2rem;
+  }
+
+  .attribution {
+    font-size: 1.2rem;
+  }
+}
+/* End of Responsives */
